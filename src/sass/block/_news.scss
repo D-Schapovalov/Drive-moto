@@ -1,0 +1,11 @@
+.news {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+
+  @include ph {
+    color: #000;
+  }
+}
