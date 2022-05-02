@@ -5,7 +5,7 @@
   justify-content: space-between;
   color: #fff;
 
-  @include ph {
+  @include mw768 {
     color: #000;
   }
 }
