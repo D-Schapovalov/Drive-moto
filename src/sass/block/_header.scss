@@ -1,0 +1,110 @@
+.header {
+  &__info {
+    display: flex;
+  }
+
+  &__address {
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    min-width: 255px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -30px;
+      width: 30px;
+      height: 30px;
+      background: url("../img/icons/location.svg") no-repeat;
+    }
+  }
+}
+.header-top {
+  min-height: 122px;
+  padding: 10px 0;
+  @include flex-center-between;
+}
+.menu {
+  &__item {
+    display: inline-block;
+  }
+  &__item + .menu__item {
+    margin-left: 50px;
+  }
+  &__link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $main;
+  }
+}
+.user {
+  &__info {
+    @include flex-center;
+  }
+  &__info + .user__info {
+    margin-left: 10px;
+  }
+}
+.basket {
+  margin-left: 10px;
+  position: relative;
+  &__num {
+    color: $white;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 19px;
+    position: absolute;
+    bottom: -7px;
+    right: -14px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent;
+    text-align: center;
+  }
+}
+.header-bottom {
+  background-color: $header;
+  min-height: 53px;
+  padding: 15px 0px;
+}
+.categories {
+  &__list {
+    @include flex-center-between;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: $main;
+    &:hover {
+      color: $black;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: auto;
+      right: 0;
+      height: 3px;
+      width: 0;
+      background-color: $accent;
+      transition: all 0.5s;
+    }
+    &:hover {
+      &::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+  }
+}

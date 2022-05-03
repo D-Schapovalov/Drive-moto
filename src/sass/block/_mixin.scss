@@ -1,9 +1,0 @@
-@mixin mw768 {
-  @media (max-width: 768px) {
-    @content;
-  }
-}
-// @include mw768 {
-//   background-color: #444;
-//   color: yellow;
-// }

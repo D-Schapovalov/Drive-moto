@@ -1,22 +1,40 @@
 $base-font-size: 14px;
-
+// ============== Mixins ===================
 @mixin mw768 {
   @media (max-width: 768px) {
     @content;
   }
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+// =========================================
 body {
-  background-color: #888;
   font-size: $base-font-size;
   font-family: "SF Pro Display", sans-serif;
   font-weight: 400;
   font-size: 20px;
+  color: #2f3035;
 }
 
-@import "block/*.scss";
+// @import "block/*.scss";
+@import "block/font";
+@import "block/news";
+@import "block/normalize";
+@import "block/slick-theme";
+@import "block/slick";
+@import "block/title";
+@import "block/variables";
+@import "block/header";
+
+.container {
+  max-width: 1090px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
